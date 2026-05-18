@@ -130,14 +130,18 @@
     border-bottom: 1px solid var(--border-subtle);
   }
   .yoy-table tbody tr:last-child td { border-bottom: none; }
+  .yoy-table tbody tr:nth-child(even) td { background: var(--bg-tile-warm); }
   .yoy-table tbody td:first-child {
     text-align: left; font-weight: 500; font-family: 'Fraunces', serif;
     font-size: 15px;
   }
   .yoy-table tbody tr.highlight td {
-    background: var(--bg-tile-warm); font-weight: 600;
+    background: #f4ebd9; font-weight: 600;
   }
-  .yoy-table tbody tr.highlight td:first-child { color: var(--accent-blue); }
+  .yoy-table tbody tr.highlight td:first-child {
+    color: var(--accent-blue);
+    box-shadow: inset 3px 0 0 var(--accent-gold);
+  }
   .yoy-table .delta { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; }
   .yoy-table .delta.up { color: var(--up); }
   .yoy-table .delta.down { color: var(--down); }
