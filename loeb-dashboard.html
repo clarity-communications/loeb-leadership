@@ -315,11 +315,12 @@
     color: var(--text-secondary); margin: 0; font-weight: 400;
   }
   .outputs-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px;
+    align-items: stretch;
   }
   .output-category {
     background: var(--bg-tile); border: 1px solid var(--border-subtle);
-    border-radius: 14px; padding: 24px 26px;
+    border-radius: 14px; padding: 22px 20px;
   }
   .output-category-label {
     font-family: 'JetBrains Mono', monospace; font-size: 10px;
@@ -328,14 +329,14 @@
     padding-bottom: 12px; border-bottom: 1px solid var(--border-subtle);
   }
   .output-row {
-    display: grid; grid-template-columns: 72px 1fr; gap: 18px;
-    align-items: baseline; padding: 14px 0;
+    display: grid; grid-template-columns: 56px 1fr; gap: 14px;
+    align-items: baseline; padding: 12px 0;
     border-bottom: 1px solid var(--border-subtle);
   }
   .output-row:last-child { border-bottom: none; padding-bottom: 0; }
   .output-row:first-of-type { padding-top: 0; }
   .output-count {
-    font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px;
+    font-family: 'Fraunces', serif; font-weight: 400; font-size: 28px;
     color: var(--text-primary); line-height: 1; text-align: right;
     font-variant-numeric: tabular-nums;
   }
@@ -539,6 +540,26 @@
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
   }
 
+  /* LinkedIn audience breakdown */
+  .audience-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;
+  }
+  .audience-panel {
+    background: var(--bg-tile); border: 1px solid var(--border-subtle);
+    border-radius: 14px; padding: 28px;
+  }
+  .audience-panel-label { margin-bottom: 8px; display: block; }
+  .audience-panel-sub {
+    font-family: 'Montserrat', sans-serif; font-size: 12px; font-style: italic;
+    color: var(--text-muted); margin-bottom: 22px; font-weight: 400;
+  }
+  .audience-callout {
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-subtle);
+    font-family: 'Montserrat', sans-serif; font-size: 12px; line-height: 1.55;
+    color: var(--text-secondary);
+  }
+  .audience-callout strong { color: var(--text-primary); font-weight: 600; }
+
   .win-tile, .tile, .panel, .headline, .analogy-block, .milestone, .quality-tile, .aeo-headline, .aeo-tile, .context-section {
     animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
   }
@@ -559,6 +580,7 @@
   @media (max-width: 1000px) {
     body { padding: 28px 20px; }
     .wins-grid, .tile-grid, .aeo-grid, .outputs-grid { grid-template-columns: 1fr 1fr; }
+    .audience-grid { grid-template-columns: 1fr; }
     .quality-strip { grid-template-columns: 1fr; }
     .lower-grid { grid-template-columns: 1fr; }
     .win-tile-value { font-size: 36px; }
@@ -713,7 +735,7 @@
   </div>
   <div class="header-meta">
     <div class="updated-label">Last Updated</div>
-    <div class="updated-date">May 17, 2026</div>
+    <div class="updated-date">May 18, 2026</div>
     <div style="margin-top:6px;">Reporting: Jun 15, 2025 &ndash; May 17, 2026</div>
     <div style="margin-top:2px;">Compared to: Jun 15, 2024 &ndash; Jun 14, 2025</div>
   </div>
@@ -777,10 +799,10 @@
 
   <div class="win-tile">
     <div class="label win-tile-label">LinkedIn Engagement</div>
-    <div class="win-tile-value">8.77<span class="unit">%</span></div>
+    <div class="win-tile-value">8.84<span class="unit">%</span></div>
     <div class="win-tile-headline">More than 4&times; the industry average</div>
     <div class="win-tile-plain">A typical company page on LinkedIn sees about 2% engagement. Loeb's posts are reaching the right people.</div>
-    <div class="benchmark-tag top">Top 10% of B2B pages &middot; 8.77% vs. 2.1% average</div>
+    <div class="benchmark-tag top">Top 10% of B2B pages &middot; 8.84% vs. 2.1% average</div>
   </div>
 
 </div>
@@ -865,7 +887,7 @@
       </tr>
       <tr>
         <td>LinkedIn engagement rate</td>
-        <td class="loeb-value">8.77%</td>
+        <td class="loeb-value">8.84%</td>
         <td class="bench-value">B2B median 2.1% &middot; "Excellent" 6&ndash;10%</td>
         <td class="position"><span class="benchmark-tag top">Top decile &middot; 4&times; median</span></td>
       </tr>
@@ -888,7 +910,7 @@
     <div class="benchmark-notes-label">What this means &middot; The big picture</div>
     <p><strong>Loeb closed half the gap from "well below average" to "industry middle."</strong> The starting point was 0.44% &mdash; far below where B2B firms typically sit. Year One reached 1.00%, growing faster than 90% of B2B programs do in a year. Getting to the industry middle (around 2.9%) is the goal for next year.</p>
     <p><strong>Growing fast matters more than being big right now.</strong> A 1.00% rate growing at this pace is a better long-term story than a flat 2.9%. At this rate, Loeb crosses the industry middle next year and gets close to top performers the year after.</p>
-    <p><strong>LinkedIn is a real strength. Protect it.</strong> 8.77% engagement puts Loeb in the top 10% of B2B company pages. The behind-the-scenes, candid post style is working &mdash; keep doing it.</p>
+    <p><strong>LinkedIn is a real strength.</strong> 8.84% engagement puts Loeb in the top 10% of B2B company pages. The behind-the-scenes, candid post style is working.</p>
     <p><strong>AI search is the biggest opportunity ahead.</strong> ChatGPT is already sending Loeb traffic, and those visitors are converting at nearly twice the rate of Google visitors. Most consulting firms don't even know this is happening yet. Loeb is already ahead.</p>
     <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 14px; font-weight: 400;">Sources: Ruler Analytics, First Page Sage, Socialinsider Q1 2026, Cleverly, Digitalapplied. All data through April 2026.</p>
   </div>
@@ -907,10 +929,6 @@
   <span class="right-note">what we made this year</span>
 </div>
 
-<div class="outputs-intro">
-  <p>Here's what produced everything above. The numbers earlier in this dashboard didn't happen on their own &mdash; they came from this work.</p>
-</div>
-
 <div class="outputs-grid">
 
   <div class="output-category">
@@ -923,7 +941,7 @@
       </div>
     </div>
     <div class="output-row">
-      <div class="output-count">71</div>
+      <div class="output-count">81</div>
       <div class="output-meta">
         <div class="output-name">LinkedIn posts</div>
         <div class="output-detail">copy, design, and scheduling across the year</div>
@@ -951,7 +969,7 @@
       <div class="output-count">4</div>
       <div class="output-meta">
         <div class="output-name">Landing pages &amp; lead magnets</div>
-        <div class="output-detail">single pages and downloads built to capture leads; includes Next Chapter Coaching service page</div>
+        <div class="output-detail">Beyond the Courtroom book page</div>
       </div>
     </div>
     <div class="output-row">
@@ -989,29 +1007,27 @@
     </div>
   </div>
 
-  <div class="output-category" style="grid-column: 1 / -1;">
+  <div class="output-category">
     <div class="output-category-label">SEO Upgrades to Existing Content</div>
-    <div class="outputs-seo-row">
-      <div class="output-row">
-        <div class="output-count">4</div>
-        <div class="output-meta">
-          <div class="output-name">Pages with schema markup added</div>
-          <div class="output-detail">the code that helps Google and AI tools understand the page</div>
-        </div>
+    <div class="output-row">
+      <div class="output-count">4</div>
+      <div class="output-meta">
+        <div class="output-name">Pages with schema markup added</div>
+        <div class="output-detail">the code that helps Google and AI tools understand the page</div>
       </div>
-      <div class="output-row">
-        <div class="output-count">7</div>
-        <div class="output-meta">
-          <div class="output-name">Pages with refreshed titles &amp; meta descriptions</div>
-          <div class="output-detail">the snippets people see in search results</div>
-        </div>
+    </div>
+    <div class="output-row">
+      <div class="output-count">7</div>
+      <div class="output-meta">
+        <div class="output-name">Pages with refreshed titles &amp; meta descriptions</div>
+        <div class="output-detail">the snippets people see in search results</div>
       </div>
-      <div class="output-row">
-        <div class="output-count">5</div>
-        <div class="output-meta">
-          <div class="output-name">Old blog posts refreshed</div>
-          <div class="output-detail">expanded content, updated citations, and FAQ schema added</div>
-        </div>
+    </div>
+    <div class="output-row">
+      <div class="output-count">5</div>
+      <div class="output-meta">
+        <div class="output-name">Old blog posts refreshed</div>
+        <div class="output-detail">expanded content, updated citations, and FAQ schema added</div>
       </div>
     </div>
   </div>
@@ -1175,25 +1191,171 @@
   </div>
   <div class="tile">
     <div class="label tile-label">Total Reach</div>
-    <div class="tile-value">20,979</div>
-    <div class="tile-delta up">&uarr; ~41% vs. prior-year baseline</div>
+    <div class="tile-value">22,897</div>
+    <div class="tile-delta up">&uarr; ~54% vs. prior-year baseline</div>
   </div>
   <div class="tile">
     <div class="label tile-label">Engagement Rate</div>
-    <div class="tile-value">8.77<span class="unit">%</span></div>
+    <div class="tile-value">8.84<span class="unit">%</span></div>
     <div class="tile-delta up">4&times; the 2% industry average</div>
   </div>
   <div class="tile">
     <div class="label tile-label">Posts Published</div>
-    <div class="tile-value">71</div>
-    <div class="tile-delta neutral">1,109 clicks driven to site</div>
+    <div class="tile-value">81</div>
+    <div class="tile-delta neutral">1,217 clicks driven to site</div>
   </div>
 </div>
 
 <div class="context-block">
   <div class="context-label">What this means in plain English</div>
-  <p><strong>Engagement rate</strong> is how often people who see a post actually do something with it &mdash; like, comment, share, or click. A 2% rate is healthy for a company page. Loeb's 8.77% means the content is genuinely landing.</p>
-  <p>The behind-the-scenes and candid posts &mdash; workshop previews, event recaps, <em>Beyond the Courtroom</em> book content &mdash; consistently beat the polished corporate stuff. Keep doing it.</p>
+  <p><strong>Engagement rate</strong> is how often people who see a post actually do something with it &mdash; like, comment, share, or click. A 2% rate is healthy for a company page. Loeb's 8.84% means the content is genuinely landing.</p>
+  <p>The behind-the-scenes and candid posts &mdash; workshop previews, event recaps, <em>Beyond the Courtroom</em> book content &mdash; consistently beat the polished content.</p>
+</div>
+
+<div class="audience-grid">
+  <div class="audience-panel">
+    <div class="label audience-panel-label">Followers by Industry</div>
+    <div class="audience-panel-sub">top industries among Loeb's 1,706 followers</div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Law Practice</div><div class="bar-pct">20.9%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Professional Training &amp; Coaching</div><div class="bar-pct">10.5%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 50%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Business Consulting &amp; Services</div><div class="bar-pct">6.4%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 31%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Higher Education</div><div class="bar-pct">4.6%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 22%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Legal Services</div><div class="bar-pct">3.6%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 17%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Non-profit Organizations</div><div class="bar-pct">2.3%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 11%"></div></div>
+    </div>
+    <div class="audience-callout">
+      <strong>Law Practice is the #1 industry following Loeb &mdash; with Legal Services, nearly 25% of the audience.</strong> The follower base directly reflects Loeb's primary target market.
+    </div>
+  </div>
+
+  <div class="audience-panel">
+    <div class="label audience-panel-label">Followers by Seniority</div>
+    <div class="audience-panel-sub">share of followers by role level</div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Senior</div><div class="bar-pct">35.3%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Entry</div><div class="bar-pct">17.9%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 51%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Director</div><div class="bar-pct">14.8%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 42%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">CXO</div><div class="bar-pct">8.6%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 24%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">VP</div><div class="bar-pct">7.3%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 21%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Owner</div><div class="bar-pct">6.5%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 18%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Manager</div><div class="bar-pct">6.1%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 17%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Partner</div><div class="bar-pct">2.5%</div></div>
+      <div class="bar-track"><div class="bar-fill" style="width: 7%"></div></div>
+    </div>
+    <div class="audience-callout">
+      <strong>75% of followers are Senior level or above</strong> &mdash; Senior, Director, CXO, VP, Owner, and Partner combined. This is exactly the decision-maker audience Loeb is built to serve.
+    </div>
+  </div>
+
+  <div class="audience-panel">
+    <div class="label audience-panel-label">Followers by Location</div>
+    <div class="audience-panel-sub">top metro areas where Loeb's audience lives</div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">New York City Metro</div><div class="bar-pct">37.0%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 100%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Washington DC-Baltimore</div><div class="bar-pct">7.5%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 20%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Greater Philadelphia</div><div class="bar-pct">4.3%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 12%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Greater Boston</div><div class="bar-pct">3.3%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 9%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Greater Chicago</div><div class="bar-pct">3.1%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 9%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Los Angeles Metro</div><div class="bar-pct">3.0%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 8%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Miami-Fort Lauderdale</div><div class="bar-pct">2.5%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 7%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Atlanta Metro</div><div class="bar-pct">2.5%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 7%"></div></div>
+    </div>
+    <div class="audience-callout">
+      <strong>The top eight metro areas account for 63% of followers</strong> &mdash; concentrated in the major legal and business hubs where Loeb's clients are based. NYC alone represents over a third of the audience.
+    </div>
+  </div>
+
+  <div class="audience-panel">
+    <div class="label audience-panel-label">Followers by Job Function</div>
+    <div class="audience-panel-sub">share of followers by function</div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Business Development</div><div class="bar-pct">20.1%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 100%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Human Resources</div><div class="bar-pct">18.1%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 90%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Operations</div><div class="bar-pct">8.5%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 42%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Education</div><div class="bar-pct">5.5%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 27%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Sales</div><div class="bar-pct">5.0%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 25%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-header"><div class="bar-label">Legal</div><div class="bar-pct">4.9%</div></div>
+      <div class="bar-track"><div class="bar-fill warm" style="width: 24%"></div></div>
+    </div>
+    <div class="audience-callout">
+      <strong>Human Resources is nearly tied for #1 at 18.1%</strong> &mdash; the most important buyer category for Loeb's L&amp;D and coaching work. Legal at #6 adds another direct buyer signal.
+    </div>
+  </div>
 </div>
 
 </div><!-- /linkedin -->
