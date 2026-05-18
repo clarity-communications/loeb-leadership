@@ -259,6 +259,25 @@
   .analogy-block p:last-child { margin-bottom: 0; }
   .analogy-block strong { color: var(--text-primary); font-weight: 600; }
 
+  /* GSC methodology caveat box */
+  .gsc-caveat {
+    background: var(--bg-tile-warm); border-left: 3px solid var(--accent-gold);
+    border-radius: 0 12px 12px 0; padding: 20px 26px; margin: 18px 0 28px 0;
+  }
+  .gsc-caveat-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent-gold-deep); margin-bottom: 10px;
+  }
+  .gsc-caveat-title {
+    font-family: 'Fraunces', serif; font-weight: 500; font-size: 16px;
+    margin-bottom: 8px; color: var(--text-primary);
+  }
+  .gsc-caveat p {
+    font-family: 'Montserrat', sans-serif; font-size: 13px; line-height: 1.6;
+    color: var(--text-secondary); margin-bottom: 0; font-weight: 400;
+  }
+
   .tile-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 14px;
   }
@@ -795,12 +814,12 @@
 <div class="milestone">
   <div class="milestone-stat">
     <div class="milestone-stat-label">Avg. Position</div>
-    <div class="milestone-stat-value">29<span class="arrow">&rarr;</span>20</div>
-    <div class="milestone-stat-context">page 3 to page 2</div>
+    <div class="milestone-stat-value">20</div>
+    <div class="milestone-stat-context">page 2 of Google results</div>
   </div>
   <div class="milestone-body">
-    <div class="milestone-label">Search Ranking &middot; Year-Over-Year</div>
-    <div class="milestone-title">Loeb's overall search ranking moved up <em>nine spots</em> &mdash; from the bottom of page 3 to page 2.</div>
+    <div class="milestone-label">Search Ranking &middot; Year One</div>
+    <div class="milestone-title">Loeb's pages are now landing on <em>page 2</em> of Google on average.</div>
     <div class="milestone-desc">Across the year, Loeb landed on <strong>page 1 for 523 search terms</strong>, in the top 3 for 148, and at #1 for 44. The strongest areas: <em>adaptability in leadership</em> (33 page-1 terms) and <em>leadership in education</em> (37 page-1 terms). Executive coaching searches in Atlanta and Phoenix are starting to break through too &mdash; a foundation to build on next year.</div>
   </div>
 </div>
@@ -809,26 +828,26 @@
 
   <div class="win-tile">
     <div class="label win-tile-label">Conversion Rate</div>
-    <div class="win-tile-value">+120<span class="unit">%</span></div>
+    <div class="win-tile-value">+113<span class="unit">%</span></div>
     <div class="win-tile-headline">Twice as many visitors are becoming leads</div>
     <div class="win-tile-plain">For every 100 people who visit the site, more than twice as many now take action &mdash; filling out a form, getting in touch, downloading something.</div>
-    <div class="benchmark-tag directional">Faster than typical &middot; +128% growth vs. 40&ndash;60% for top-performing programs</div>
+    <div class="benchmark-tag directional">Faster than typical &middot; +113% growth vs. 40&ndash;60% for top-performing programs</div>
   </div>
 
   <div class="win-tile">
     <div class="label win-tile-label">Google Search Clicks</div>
-    <div class="win-tile-value">+61<span class="unit">%</span></div>
-    <div class="win-tile-headline">More people finding Loeb on Google</div>
-    <div class="win-tile-plain">21,254 clicks from Google this year &mdash; 61% more than the year before. Visitors finding Loeb on their own.</div>
-    <div class="benchmark-tag above">Well above average &middot; +61% vs. typical 5&ndash;15% for organic search</div>
+    <div class="win-tile-value">20,434</div>
+    <div class="win-tile-headline">Clicks from Google in Year One</div>
+    <div class="win-tile-plain">Visitors finding Loeb on their own through Google search. See note below on how Year One search data is reported.</div>
+    <div class="benchmark-tag above">Year One total &middot; strong organic foundation</div>
   </div>
 
   <div class="win-tile">
     <div class="label win-tile-label">Search Visibility</div>
-    <div class="win-tile-value">+158<span class="unit">%</span></div>
-    <div class="win-tile-headline">Loeb showing up in 2.6&times; more searches</div>
-    <div class="win-tile-plain">Loeb's pages appeared in Google search results 4.9 million times this year &mdash; up from 1.9 million.</div>
-    <div class="benchmark-tag above">Well above average &middot; +158% growth</div>
+    <div class="win-tile-value">4.8<span class="unit">M</span></div>
+    <div class="win-tile-headline">Times Loeb appeared in Google results</div>
+    <div class="win-tile-plain">Loeb's pages showed up 4.8 million times in Google search results this year &mdash; an indicator that Google treats the site as relevant for a wide range of leadership-related searches.</div>
+    <div class="benchmark-tag above">Year One total &middot; strong topical authority</div>
   </div>
 
   <div class="win-tile">
@@ -839,6 +858,12 @@
     <div class="benchmark-tag top">Top 10% of B2B pages &middot; 8.84% vs. 2.1% average</div>
   </div>
 
+</div>
+
+<div class="gsc-caveat">
+  <div class="gsc-caveat-label">A note on search data</div>
+  <div class="gsc-caveat-title">Google Search Console was connected to loebleadership.com in January 2025.</div>
+  <p>Because a full year of pre-2025 search data from the same source isn't available, Year One search metrics &mdash; clicks, impressions, and average position &mdash; are presented as a standalone baseline rather than a year-over-year comparison. These numbers establish a verified starting point for future reporting.</p>
 </div>
 
 <div class="quality-strip">
@@ -885,39 +910,39 @@
     <tbody>
       <tr>
         <td>Website conversion rate</td>
-        <td class="loeb-value">1.00%</td>
+        <td class="loeb-value">0.83%</td>
         <td class="bench-value">B2B median 2.9% &middot; Professional services 3&ndash;8%</td>
         <td class="position"><span class="benchmark-tag below">Below median &middot; gap closing</span></td>
       </tr>
       <tr>
         <td>Conversion rate growth (YoY)</td>
-        <td class="loeb-value">+128%</td>
+        <td class="loeb-value">+113%</td>
         <td class="bench-value">Top-performer CRO programs: 40&ndash;60% annual lift</td>
         <td class="position"><span class="benchmark-tag top">~2&times; top performers</span></td>
       </tr>
       <tr>
         <td>Conversion volume growth (YoY)</td>
-        <td class="loeb-value">+16%</td>
+        <td class="loeb-value">+19%</td>
         <td class="bench-value">Typical steady B2B program: 5&ndash;15%</td>
         <td class="position"><span class="benchmark-tag above">Above typical</span></td>
       </tr>
       <tr>
-        <td>Search clicks growth (YoY)</td>
-        <td class="loeb-value">+61%</td>
-        <td class="bench-value">Typical organic growth: 5&ndash;15% annually</td>
-        <td class="position"><span class="benchmark-tag above">~4&times; typical</span></td>
+        <td>Search clicks (Year One total)</td>
+        <td class="loeb-value">20,434</td>
+        <td class="bench-value">No reliable benchmark &middot; varies widely by firm size and category</td>
+        <td class="position"><span class="benchmark-tag above">Strong foundation</span></td>
       </tr>
       <tr>
-        <td>Search impressions growth (YoY)</td>
-        <td class="loeb-value">+158%</td>
-        <td class="bench-value">Industry-wide visibility growth is rare without active SEO investment</td>
-        <td class="position"><span class="benchmark-tag above">Strong outlier</span></td>
+        <td>Search impressions (Year One total)</td>
+        <td class="loeb-value">4.8M</td>
+        <td class="bench-value">No reliable benchmark &middot; varies widely by firm size and category</td>
+        <td class="position"><span class="benchmark-tag above">Strong topical authority</span></td>
       </tr>
       <tr>
-        <td>Average search position change</td>
-        <td class="loeb-value">+9 positions</td>
-        <td class="bench-value">Most sites drift down or plateau without sustained SEO work</td>
-        <td class="position"><span class="benchmark-tag above">Active improvement</span></td>
+        <td>Average search position (Year One)</td>
+        <td class="loeb-value">Position 20</td>
+        <td class="bench-value">Top of page 2 &middot; with several pages now on page 1</td>
+        <td class="position"><span class="benchmark-tag above">Page 2 of Google</span></td>
       </tr>
       <tr>
         <td>LinkedIn engagement rate</td>
@@ -942,8 +967,8 @@
 
   <div class="benchmark-notes">
     <div class="benchmark-notes-label">What this means &middot; The big picture</div>
-    <p><strong>Loeb closed half the gap from "well below average" to "industry middle."</strong> The starting point was 0.44% &mdash; far below where B2B firms typically sit. Year One reached 1.00%, growing faster than 90% of B2B programs do in a year. Getting to the industry middle (around 2.9%) is the goal for next year.</p>
-    <p><strong>Growing fast matters more than being big right now.</strong> A 1.00% rate growing at this pace is a better long-term story than a flat 2.9%. At this rate, Loeb crosses the industry middle next year and gets close to top performers the year after.</p>
+    <p><strong>Loeb closed half the gap from "well below average" to "industry middle."</strong> The starting point was 0.39% &mdash; far below where B2B firms typically sit. Year One reached 0.83%, growing faster than 90% of B2B programs do in a year. Getting to the industry middle (around 2.9%) is the goal for next year.</p>
+    <p><strong>Growing fast matters more than being big right now.</strong> A 0.83% rate growing at this pace is a better long-term story than a flat 2.9%. At this rate, Loeb crosses the industry middle next year and gets close to top performers the year after.</p>
     <p><strong>LinkedIn is a real strength.</strong> 8.84% engagement puts Loeb in the top 10% of B2B company pages. The behind-the-scenes, candid post style is working.</p>
     <p><strong>AI search is the biggest opportunity ahead.</strong> ChatGPT is already sending Loeb traffic, and those visitors are converting at nearly twice the rate of Google visitors. Most consulting firms don't even know this is happening yet. Loeb is already ahead.</p>
     <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 14px; font-weight: 400;">Sources: Ruler Analytics, First Page Sage, Socialinsider Q1 2026, Cleverly, Digitalapplied. All data through April 2026.</p>
@@ -1076,34 +1101,40 @@
   <span class="right-note">how easily people find Loeb on Google</span>
 </div>
 
+<div class="gsc-caveat">
+  <div class="gsc-caveat-label">A note on search data</div>
+  <div class="gsc-caveat-title">Google Search Console was connected to loebleadership.com in January 2025.</div>
+  <p>Because a full year of pre-2025 search data from the same source isn't available, Year One search metrics &mdash; clicks, impressions, and average position &mdash; are presented as a standalone baseline rather than a year-over-year comparison. These numbers establish a verified starting point for future reporting.</p>
+</div>
+
 <div class="tile-grid">
   <div class="tile">
     <div class="label tile-label">Total Clicks</div>
-    <div class="tile-value">21,254</div>
-    <div class="tile-delta up">&uarr; 61% vs. prior year</div>
+    <div class="tile-value">20,434</div>
+    <div class="tile-delta neutral">Year One total</div>
   </div>
   <div class="tile">
     <div class="label tile-label">Times Shown</div>
-    <div class="tile-value">4.9<span class="unit">M</span></div>
-    <div class="tile-delta up">&uarr; 158% vs. prior year</div>
+    <div class="tile-value">4.8<span class="unit">M</span></div>
+    <div class="tile-delta neutral">Year One total</div>
   </div>
   <div class="tile">
     <div class="label tile-label">Avg. Search Rank</div>
     <div class="tile-value">20</div>
-    <div class="tile-delta up">&uarr; up from 29 (page 3 to page 2)</div>
+    <div class="tile-delta neutral">top of page 2</div>
   </div>
   <div class="tile">
     <div class="label tile-label">Click Rate</div>
     <div class="tile-value">0.43<span class="unit">%</span></div>
-    <div class="tile-delta neutral">expected for high-volume rankings</div>
+    <div class="tile-delta neutral">in line with high-volume ranking patterns</div>
   </div>
 </div>
 
 <div class="context-block">
   <div class="context-label">What this means in plain language</div>
-  <p><strong>Times Shown</strong> is how often a Loeb page came up in Google search results. Going from 1.9M to 4.9M means Google now treats Loeb's content as relevant for 2.6&times; more searches.</p>
-  <p><strong>Average Search Rank</strong> is where Loeb's pages typically land on Google. Rank 29 meant showing up near the bottom of page 3, where almost no one clicks. Rank 20 means top of page 2 &mdash; with some pages now on page 1. That's the difference between invisible and findable.</p>
-  <p><strong>Click Rate</strong> is the percentage of searches that turn into a click. It dipped slightly because Loeb is now appearing for more searches &mdash; some of which won't be a perfect fit. The total number of clicks went way up, which is what matters.</p>
+  <p><strong>Times Shown</strong> is how often a Loeb page came up in Google search results. 4.8 million impressions across Year One is a strong indicator that Google treats Loeb's content as relevant for a wide range of leadership-related searches.</p>
+  <p><strong>Average Search Rank</strong> is where Loeb's pages typically land on Google. Position 20 means top of page 2 &mdash; with several pages now on page 1. That's the difference between invisible and findable.</p>
+  <p><strong>Click Rate</strong> is the percentage of searches that turn into a click. 0.43% is in line with what's typical when a site appears for a wide mix of search terms, some of which won't be a perfect fit. The volume is what matters here.</p>
 </div>
 
 <div class="section-header">
@@ -1425,10 +1456,16 @@
 
 <div class="context-block">
   <div class="context-label">Why total traffic looks smaller this year &mdash; and why that's a good thing</div>
-  <p>Total visits dropped from 116,127 last year to 63,054 this year. That's not lost audience &mdash; it's cleanup.</p>
+  <p>Total visits dropped from 116,501 last year to 64,558 this year. That's not lost audience &mdash; it's cleanup.</p>
   <p><strong>Two things happened.</strong> First, a single weird spike of ~38,000 visits in August 2024 turned out to be automated bot traffic from a Virginia data center. None of it was real people. Second, Google's 2025 spam updates filtered out junk traffic across the whole internet. Most sites saw their numbers drop. Loeb included.</p>
   <p><strong>Here's how we know this is good news.</strong> Visits dropped 46%, but leads went up 16%. Conversion rate more than doubled. Time on site jumped 46%. Bounce rate improved 7 points. Less traffic, but the traffic that's left is engaged and converting.</p>
   <a href="loeb-yoy-analysis.html">View full year-over-year breakdown &rarr;</a>
+</div>
+
+<div class="gsc-caveat">
+  <div class="gsc-caveat-label">A note on search data</div>
+  <div class="gsc-caveat-title">Google Search Console was connected to loebleadership.com in January 2025.</div>
+  <p>Because a full year of pre-2025 search data from the same source isn't available, Year One search metrics &mdash; clicks, impressions, and average position &mdash; are presented as a standalone baseline rather than a year-over-year comparison. These numbers establish a verified starting point for future reporting.</p>
 </div>
 
 <div class="lower-grid">
