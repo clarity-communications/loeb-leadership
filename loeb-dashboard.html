@@ -579,6 +579,8 @@
 
   @media (max-width: 1000px) {
     body { padding: 28px 20px; }
+    .top-nav { margin: -28px -20px 24px; padding: 12px 20px; gap: 18px; font-size: 9px; letter-spacing: 0.12em; }
+    .tab-nav { top: 37px; }
     .wins-grid, .tile-grid, .aeo-grid, .outputs-grid { grid-template-columns: 1fr 1fr; }
     .audience-grid { grid-template-columns: 1fr; }
     .quality-strip { grid-template-columns: 1fr; }
@@ -597,6 +599,7 @@
     .benchmark-table tbody td.bench-value::before { content: 'Benchmark: '; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; }
   }
   @media (max-width: 640px) {
+    .top-nav { gap: 12px; font-size: 8px; letter-spacing: 0.08em; padding: 10px 16px; }
     .milestone { flex-direction: column; align-items: flex-start; gap: 20px; }
     .milestone-stat { padding-right: 0; border-right: none; border-bottom: 1px solid var(--border-subtle); padding-bottom: 20px; width: 100%; }
     .milestone-stat-value { font-size: 44px; }
@@ -698,9 +701,34 @@
     .leg-metric { display: none; }
   }
 
+  /* ── Top Navigation (cross-document) ── */
+  .top-nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(245, 240, 230, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    margin: -48px -56px 32px;
+    padding: 13px 56px;
+    display: flex; justify-content: center; gap: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .top-nav a {
+    color: var(--text-muted); text-decoration: none;
+    padding: 3px 0; border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+  }
+  .top-nav a:hover { color: var(--accent-blue); }
+  .top-nav a.current {
+    color: var(--accent-blue); font-weight: 600;
+    border-bottom-color: var(--accent-gold);
+  }
+
   /* ── Tab Navigation ── */
   .tab-nav {
-    position: sticky; top: 0; z-index: 100;
+    position: sticky; top: 41px; z-index: 100;
     background: var(--bg-main);
     border-bottom: 2px solid var(--border-subtle);
     display: flex; gap: 0; overflow-x: auto;
@@ -727,6 +755,12 @@
 </style>
 </head>
 <body>
+
+<nav class="top-nav">
+  <a href="loeb-dashboard.html" class="current">Year One Dashboard</a>
+  <a href="loeb-yoy-analysis.html">Year-Over-Year Analysis</a>
+  <a href="loeb-strategy-year2.html">Year Two Strategy</a>
+</nav>
 
 <header class="header">
   <div class="brand">

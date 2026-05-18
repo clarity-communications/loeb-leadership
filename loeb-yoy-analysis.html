@@ -258,15 +258,50 @@
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
   }
 
+  /* ── Top Navigation (cross-document) ── */
+  .top-nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(245, 240, 230, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    margin: -48px -56px 32px;
+    padding: 13px 56px;
+    display: flex; justify-content: center; gap: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .top-nav a {
+    color: var(--text-muted); text-decoration: none;
+    padding: 3px 0; border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+  }
+  .top-nav a:hover { color: var(--accent-blue); }
+  .top-nav a.current {
+    color: var(--accent-blue); font-weight: 600;
+    border-bottom-color: var(--accent-gold);
+  }
+
   @media (max-width: 1000px) {
     body { padding: 28px 20px; }
+    .top-nav { margin: -28px -20px 24px; padding: 12px 20px; gap: 18px; font-size: 9px; letter-spacing: 0.12em; }
     .evidence-grid { grid-template-columns: 1fr; }
     .triangulation .sources { grid-template-columns: 1fr; }
     .page-title { font-size: 28px; }
   }
+  @media (max-width: 640px) {
+    .top-nav { gap: 12px; font-size: 8px; letter-spacing: 0.08em; padding: 10px 16px; }
+  }
 </style>
 </head>
 <body>
+
+<nav class="top-nav">
+  <a href="loeb-dashboard.html">Year One Dashboard</a>
+  <a href="loeb-yoy-analysis.html" class="current">Year-Over-Year Analysis</a>
+  <a href="loeb-strategy-year2.html">Year Two Strategy</a>
+</nav>
 
 <header class="header">
   <div class="brand">

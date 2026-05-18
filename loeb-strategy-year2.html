@@ -54,9 +54,34 @@
   }
   .header-meta .updated-date { color: var(--text-secondary); font-size: 11px; }
 
+  /* ── Top Navigation (cross-document) ── */
+  .top-nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(245, 240, 230, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    margin: -48px -56px 32px;
+    padding: 13px 56px;
+    display: flex; justify-content: center; gap: 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .top-nav a {
+    color: var(--text-muted); text-decoration: none;
+    padding: 3px 0; border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+  }
+  .top-nav a:hover { color: var(--accent-blue); }
+  .top-nav a.current {
+    color: var(--accent-blue); font-weight: 600;
+    border-bottom-color: var(--accent-gold);
+  }
+
   /* ── Tab Nav ── */
   .tab-nav {
-    position: sticky; top: 0; z-index: 100;
+    position: sticky; top: 41px; z-index: 100;
     background: var(--bg-main);
     border-bottom: 2px solid var(--border-subtle);
     display: flex; gap: 0; overflow-x: auto;
@@ -446,7 +471,8 @@
   /* ── Responsive ── */
   @media (max-width: 1000px) {
     body { padding: 32px 32px; }
-    .tab-nav { margin: 0 -32px 32px; padding: 0 32px; }
+    .top-nav { margin: -32px -32px 24px; padding: 12px 32px; gap: 18px; font-size: 9px; letter-spacing: 0.12em; }
+    .tab-nav { top: 37px; margin: 0 -32px 32px; padding: 0 32px; }
     .tile-grid { grid-template-columns: 1fr 1fr; }
     .action-grid { grid-template-columns: 1fr; }
     .two-col, .three-col { grid-template-columns: 1fr; }
@@ -457,13 +483,20 @@
   }
   @media (max-width: 640px) {
     body { padding: 20px 20px; }
-    .tab-nav { margin: 0 -20px 24px; padding: 0 20px; }
+    .top-nav { margin: -20px -20px 20px; padding: 10px 16px; gap: 12px; font-size: 8px; letter-spacing: 0.08em; }
+    .tab-nav { top: 33px; margin: 0 -20px 24px; padding: 0 20px; }
     .cover-title { font-size: 36px; }
     .tile-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
+
+<nav class="top-nav">
+  <a href="loeb-dashboard.html">Year One Dashboard</a>
+  <a href="loeb-yoy-analysis.html">Year-Over-Year Analysis</a>
+  <a href="loeb-strategy-year2.html" class="current">Year Two Strategy</a>
+</nav>
 
 <!-- HEADER -->
 <div class="header">
