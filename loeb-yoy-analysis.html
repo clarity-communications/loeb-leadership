@@ -163,6 +163,35 @@
     color: var(--text-muted); letter-spacing: 0.1em;
     margin-top: 14px; font-style: italic;
   }
+  .gsc-caveat {
+    background: var(--bg-tile-warm); border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 0 10px 10px 0; padding: 18px 22px;
+    margin: 16px 0 20px;
+  }
+  .gsc-caveat-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent-gold-deep); font-weight: 600; margin-bottom: 8px;
+  }
+  .gsc-caveat p {
+    font-family: 'Montserrat', sans-serif; font-size: 13px; line-height: 1.6;
+    color: var(--text-secondary); margin: 0;
+  }
+  .gsc-caveat strong { color: var(--text-primary); font-weight: 600; }
+  .baseline-cell {
+    color: var(--text-muted); font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 500;
+  }
+  .baseline-delta {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+    color: var(--accent-gold-deep); letter-spacing: 0.05em;
+  }
+  .yoy-table tbody tr.baseline-row td { background: var(--bg-tile-warm); }
+  .yoy-table tbody tr.baseline-row td:first-child {
+    box-shadow: inset 3px 0 0 var(--accent-gold);
+    color: var(--accent-blue);
+  }
   .yoy-legend {
     display: flex; gap: 24px; flex-wrap: wrap; align-items: center;
     padding: 12px 20px 14px;
@@ -395,9 +424,9 @@
     <tbody>
       <tr>
         <td>Conversion rate <span class="source-note">GA4 &middot; user key event rate</span></td>
-        <td>0.44%</td>
-        <td>1.00%</td>
-        <td class="delta up">+128%</td>
+        <td>0.39%</td>
+        <td>0.83%</td>
+        <td class="delta up">+113%</td>
       </tr>
       <tr>
         <td>Conversions <span class="source-note">GA4 &middot; key events</span></td>
@@ -417,23 +446,23 @@
         <td>0.52</td>
         <td class="delta up">+34%</td>
       </tr>
-      <tr>
-        <td>Search clicks <span class="source-note">Year 0: Squarespace Analytics (Jun 1, 2024 &ndash; May 31, 2025) &middot; Year 1: GSC</span></td>
-        <td>13,050</td>
+      <tr class="baseline-row">
+        <td>Search clicks <span class="source-note">GSC &middot; see note below</span></td>
+        <td><span class="baseline-cell">&mdash;</span></td>
         <td>21,254</td>
-        <td class="delta up">+63%</td>
+        <td><span class="baseline-delta">Year One baseline</span></td>
       </tr>
-      <tr>
-        <td>Search impressions <span class="source-note">Year 0: Squarespace Analytics (Jun 1, 2024 &ndash; May 31, 2025) &middot; Year 1: GSC</span></td>
-        <td>1.9M</td>
+      <tr class="baseline-row">
+        <td>Search impressions <span class="source-note">GSC &middot; see note below</span></td>
+        <td><span class="baseline-cell">&mdash;</span></td>
         <td>4.9M</td>
-        <td class="delta up">+158%</td>
+        <td><span class="baseline-delta">Year One baseline</span></td>
       </tr>
-      <tr>
-        <td>Avg search position <span class="source-note">Year 0: Squarespace &middot; Year 1: GSC</span></td>
-        <td>29 <span class="source-note">(bottom of page 3)</span></td>
+      <tr class="baseline-row">
+        <td>Avg search position <span class="source-note">GSC &middot; see note below</span></td>
+        <td><span class="baseline-cell">&mdash;</span></td>
         <td>20 <span class="source-note">(top of page 2)</span></td>
-        <td class="delta up">9 positions &uarr;</td>
+        <td><span class="baseline-delta">Year One baseline</span></td>
       </tr>
       <tr>
         <td>Bounce rate <span class="source-note">Squarespace</span></td>
@@ -455,7 +484,11 @@
       </tr>
     </tbody>
   </table>
-  <p class="yoy-source-footer">Primary source: Google Analytics 4 (conversions and engagement). Cross-verified with Google Search Console (search performance) and Squarespace Analytics (bounce rate, traffic sources). Both year-zero and year-one date ranges are full 12-month equivalents.</p>
+  <p class="yoy-source-footer">Primary source: Google Analytics 4 (conversions and engagement). Cross-verified with Google Search Console (search performance) and Squarespace Analytics (bounce rate, traffic sources). GA4 and engagement metrics span full 12-month equivalents for both years; see note below on search data.</p>
+  <div class="gsc-caveat">
+    <div class="gsc-caveat-label">A note on search data</div>
+    <p>Google Search Console was connected to loebleadership.com in January 2025. Because a full year of pre-2025 search data from the same source isn't available, Year One search metrics &mdash; clicks, impressions, and average position &mdash; are presented as a standalone baseline rather than a year-over-year comparison. These numbers establish a verified starting point for future reporting.</p>
+  </div>
 </div>
 
 <div class="section-header">
@@ -468,7 +501,7 @@
   <h2>Year 0 traffic was inflated by <em>~38,000 bot visits</em> plus broader spam Google has since filtered out.</h2>
   <p>August 2024 stands out in Year 0's monthly traffic. The site received about <strong>38,000 visits that month</strong>, against a typical baseline of 4,000 to 10,000 visits. The spike traced back to automated, non-human traffic from Ashburn, Virginia &mdash; an area dense with data centers, including Amazon Web Services. None of those visits engaged with the site.</p>
   <p>That's the first cleanup. The second is broader: <strong>Google's 2025 spam updates filtered low-quality traffic across the entire internet.</strong> Direct sessions to loebleadership.com fell from 62,006 to 26,280 &mdash; roughly the volume of bot traffic Google removed. Most B2B sites saw similar declines. This was an industry-wide reset, not a Loeb-specific problem.</p>
-  <p><strong>The key point:</strong> none of the removed traffic was converting. Conversions held at 519 in Year 0 and grew to 601 in Year 1 (+16%). The cleanup made the real conversion rate visible &mdash; it more than doubled (0.44% &rarr; 1.00%, +128%). The audience that remains is engaging more (+46% time on site, +34% engaged sessions per user) and converting at over twice the rate.</p>
+  <p><strong>The key point:</strong> none of the removed traffic was converting. Conversions held at 519 in Year 0 and grew to 601 in Year 1 (+16%). The cleanup made the real conversion rate visible &mdash; it more than doubled (0.39% &rarr; 0.83%, +113%). The audience that remains is engaging more (+46% time on site, +34% engaged sessions per user) and converting at over twice the rate.</p>
 </div>
 
 <div class="evidence-grid">
@@ -502,7 +535,7 @@
   <div class="sources">
     <div class="source">
       <div class="source-name">Google Analytics 4</div>
-      <p class="source-detail"><strong>System of record for conversions and engagement.</strong> Year 1: 63,054 sessions, 601 conversions, 1.00% conversion rate (per user key event rate). Year 0: 116,127 sessions, 519 conversions, 0.44% conversion rate. Both periods are full 12-month equivalents from the same GA4 property.</p>
+      <p class="source-detail"><strong>System of record for conversions and engagement.</strong> Year 1: 63,054 sessions, 601 conversions, 0.83% conversion rate (per user key event rate). Year 0: 116,127 sessions, 519 conversions, 0.39% conversion rate. Both periods are full 12-month equivalents from the same GA4 property.</p>
     </div>
     <div class="source">
       <div class="source-name">Squarespace Analytics</div>
@@ -510,7 +543,7 @@
     </div>
     <div class="source">
       <div class="source-name">Google Search Console</div>
-      <p class="source-detail"><strong>Google's own search data.</strong> Year 1 average position 20.7 (matches Squarespace's 20). Year 1: 21,254 clicks, 5.26M impressions (matches Squarespace within 5%).</p>
+      <p class="source-detail"><strong>Google's own search data.</strong> Year One baseline: 21,254 clicks, 4.9M impressions, average position 20 (top of page 2). GSC was connected in January 2025, so a full prior-year comparison from the same source isn't available; these numbers establish a verified starting point for future reporting.</p>
     </div>
   </div>
 </div>
@@ -518,10 +551,10 @@
 <div class="reframe">
   <div class="reframe-label">The honest read</div>
   <h2>Year One grew quality &mdash; and AI conversions grew nearly <em>5&times;</em>.</h2>
-  <p><strong>Conversion rate more than doubled</strong> (0.44% &rarr; 1.00%, +128%). Average engagement time per user grew 46% (28s &rarr; 41s). Engaged sessions per user grew 34%. Search clicks grew 63%. Search visibility grew 158%. Average position improved from page 3 to page 2, with page 1 wins on the buyer-intent terms that drive business.</p>
+  <p><strong>Conversion rate more than doubled</strong> (0.39% &rarr; 0.83%, +113%). Average engagement time per user grew 46% (28s &rarr; 41s). Engaged sessions per user grew 34%. Search visibility is now measured against a verified baseline: 21,254 clicks, 4.9M impressions, and an average position of 20 (top of page 2), with page 1 wins on the buyer-intent terms that drive business.</p>
   <p><strong>Sessions dropped 46% because Year 0 was inflated.</strong> The August 2024 bot spike and Google's 2025 spam filtering removed traffic that was never converting. Direct sessions alone fell from 62,006 to 26,280 &mdash; exactly where bot traffic typically lands. The audience that remains is finding Loeb through Google and AI tools, engaging more, and converting at over twice the rate.</p>
   <p><strong>AI search became dramatically more productive.</strong> ChatGPT and Perplexity sent 2,796 sessions to Loeb's site in Year One &mdash; slightly more than Year 0 &mdash; and generated <strong>53 leads, up from 11 the year before</strong> (+382%). ChatGPT visitors convert at 2.30%, nearly 2&times; the rate of Google Organic traffic (1.25%). AI didn't appear in Year One; it became one of Loeb's highest-converting channels.</p>
-  <p>Every claim on the main dashboard is verified across at least two independent sources.</p>
+  <p>Every claim on the main dashboard is verified across at least two independent sources, with the GSC connection date disclosed where it affects comparability.</p>
 </div>
 
 <footer class="footer">
