@@ -135,12 +135,19 @@
     text-align: left; font-weight: 500; font-family: 'Fraunces', serif;
     font-size: 15px;
   }
-  .yoy-table tbody tr.highlight td {
-    background: #f4ebd9; font-weight: 600;
+  .yoy-table tbody tr:has(.delta.up) td {
+    background: rgba(90, 122, 106, 0.08);
   }
-  .yoy-table tbody tr.highlight td:first-child {
+  .yoy-table tbody tr:has(.delta.up) td:first-child {
+    box-shadow: inset 3px 0 0 var(--up);
     color: var(--accent-blue);
-    box-shadow: inset 3px 0 0 var(--accent-gold);
+  }
+  .yoy-table tbody tr:has(.delta.down) td {
+    background: rgba(168, 93, 93, 0.08);
+  }
+  .yoy-table tbody tr:has(.delta.down) td:first-child {
+    box-shadow: inset 3px 0 0 var(--down);
+    color: var(--accent-blue);
   }
   .yoy-table .delta { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; }
   .yoy-table .delta.up { color: var(--up); }
@@ -155,6 +162,33 @@
     font-family: 'JetBrains Mono', monospace; font-size: 10px;
     color: var(--text-muted); letter-spacing: 0.1em;
     margin-top: 14px; font-style: italic;
+  }
+  .yoy-legend {
+    display: flex; gap: 24px; flex-wrap: wrap; align-items: center;
+    padding: 12px 20px 14px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .yoy-legend-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted);
+    padding-right: 14px; border-right: 1px solid var(--border-subtle);
+  }
+  .yoy-legend-item { display: flex; align-items: center; gap: 8px; }
+  .yoy-legend-swatch {
+    width: 22px; height: 14px; border-radius: 2px;
+    display: inline-block; flex-shrink: 0;
+  }
+  .yoy-legend-swatch.up {
+    background: rgba(90, 122, 106, 0.12);
+    box-shadow: inset 3px 0 0 var(--up);
+  }
+  .yoy-legend-swatch.down {
+    background: rgba(168, 93, 93, 0.12);
+    box-shadow: inset 3px 0 0 var(--down);
+  }
+  .yoy-legend-text {
+    font-family: 'Montserrat', sans-serif; font-size: 12px;
+    color: var(--text-secondary); font-style: italic;
   }
 
   .spike-callout {
@@ -338,6 +372,17 @@
 </div>
 
 <div class="yoy-table-wrap">
+  <div class="yoy-legend">
+    <span class="yoy-legend-label">Reading the table</span>
+    <div class="yoy-legend-item">
+      <span class="yoy-legend-swatch up"></span>
+      <span class="yoy-legend-text">Year-over-year improvement</span>
+    </div>
+    <div class="yoy-legend-item">
+      <span class="yoy-legend-swatch down"></span>
+      <span class="yoy-legend-text">Decline &mdash; see notes for context</span>
+    </div>
+  </div>
   <table class="yoy-table">
     <thead>
       <tr>
@@ -348,7 +393,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="highlight">
+      <tr>
         <td>Conversion rate <span class="source-note">GA4 &middot; user key event rate</span></td>
         <td>0.44%</td>
         <td>1.00%</td>
@@ -360,31 +405,31 @@
         <td>601</td>
         <td class="delta up">+16%</td>
       </tr>
-      <tr class="highlight">
+      <tr>
         <td>Avg engagement time per user <span class="source-note">GA4</span></td>
         <td>28s</td>
         <td>41s</td>
         <td class="delta up">+46%</td>
       </tr>
-      <tr class="highlight">
+      <tr>
         <td>Engaged sessions per user <span class="source-note">GA4</span></td>
         <td>0.39</td>
         <td>0.52</td>
         <td class="delta up">+34%</td>
       </tr>
-      <tr class="highlight">
+      <tr>
         <td>Search clicks <span class="source-note">Year 0: Squarespace Analytics (Jun 1, 2024 &ndash; May 31, 2025) &middot; Year 1: GSC</span></td>
         <td>13,050</td>
         <td>21,254</td>
         <td class="delta up">+63%</td>
       </tr>
-      <tr class="highlight">
+      <tr>
         <td>Search impressions <span class="source-note">Year 0: Squarespace Analytics (Jun 1, 2024 &ndash; May 31, 2025) &middot; Year 1: GSC</span></td>
         <td>1.9M</td>
         <td>4.9M</td>
         <td class="delta up">+158%</td>
       </tr>
-      <tr class="highlight">
+      <tr>
         <td>Avg search position <span class="source-note">Year 0: Squarespace &middot; Year 1: GSC</span></td>
         <td>29 <span class="source-note">(bottom of page 3)</span></td>
         <td>20 <span class="source-note">(top of page 2)</span></td>
