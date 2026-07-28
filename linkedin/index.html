@@ -1,1 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Best Practices</title>
+<meta name="description" content="A short guide to getting started on LinkedIn: how often to post, what to post, how to reshare, and what to avoid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Montserrat:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#F6F2E9;
+    --card:#FDFBF6;
+    --navy:#113662;
+    --navy-soft:#4A5D75;
+    --rule:#DED6C6;
+    --gold:#EFA119;
+    --gold-wash:#FBF0D9;
+    --measure:44rem;
+  }
 
+  *{box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none!important;transition:none!important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--navy);
+    font-family:'Montserrat',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.68;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:var(--measure);
+    margin:0 auto;
+    padding:0 1.5rem;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    line-height:1.15;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  h1{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;}
+  h2{font-size:clamp(1.5rem,4vw,1.95rem);}
+  h3{font-size:1.08rem;font-weight:600;}
+
+  p{margin:0 0 1.15rem;}
+  p:last-child{margin-bottom:0;}
+
+  a{color:var(--navy);text-decoration-color:var(--gold);text-underline-offset:3px;}
+  a:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:2px;}
+
+  strong{font-weight:600;}
+
+  .ui{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:0.82em;
+    font-weight:600;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-bottom-width:2px;
+    border-radius:5px;
+    padding:0.12em 0.45em;
+    white-space:nowrap;
+    color:var(--navy);
+  }
+
+  header{
+    padding:5rem 0 2.75rem;
+    border-bottom:1px solid var(--rule);
+  }
+  header .lede{
+    font-size:1.15rem;
+    color:var(--navy-soft);
+    margin-top:1.25rem;
+    max-width:33rem;
+  }
+
+  section{padding:3.25rem 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+
+  .sec-num{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    color:var(--gold);
+    display:block;
+    margin-bottom:0.7rem;
+  }
+  section > .wrap > h2 + p{margin-top:1.35rem;}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:1.45rem 1.55rem;
+    margin:1.5rem 0;
+  }
+  .card h3{margin-bottom:0.6rem;}
+  .card.gold{background:var(--gold-wash);border-color:#E9D9AE;}
+
+  .rank{margin:1.5rem 0 0;padding:0;list-style:none;}
+  .rank li{
+    display:flex;
+    align-items:baseline;
+    gap:0.9rem;
+    padding:0.85rem 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .rank li:last-child{border-bottom:none;}
+  .rank .tier{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--navy-soft);
+    flex:0 0 4.5rem;
+  }
+  .rank .what{flex:1;}
+  .rank .what em{
+    display:block;
+    font-style:normal;
+    font-size:0.9rem;
+    color:var(--navy-soft);
+    margin-top:0.1rem;
+  }
+
+  ol.steps{counter-reset:step;list-style:none;padding:0;margin:1.5rem 0 0;}
+  ol.steps > li{
+    counter-increment:step;
+    position:relative;
+    padding:0 0 1.35rem 3rem;
+  }
+  ol.steps > li::before{
+    content:counter(step);
+    position:absolute;
+    left:0;
+    top:0.05rem;
+    width:1.9rem;
+    height:1.9rem;
+    border-radius:50%;
+    background:var(--navy);
+    color:var(--ground);
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.8rem;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  ol.steps > li:last-child{padding-bottom:0;}
+
+  .paths{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+    margin:1.75rem 0 0;
+  }
+  @media (max-width:640px){.paths{grid-template-columns:1fr;}}
+  .path{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:1.35rem;
+  }
+  .path .label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--navy-soft);
+    display:block;
+    margin-bottom:0.75rem;
+  }
+  .path h3{margin-bottom:0.6rem;}
+  .path p{font-size:0.94rem;margin-bottom:0.8rem;}
+  .path .when{
+    font-size:0.88rem;
+    color:var(--navy-soft);
+    border-top:1px solid var(--rule);
+    padding-top:0.8rem;
+    margin:0;
+  }
+
+  .swap{margin:1.5rem 0 0;}
+  .swap div{padding:1rem 0;border-top:1px solid var(--rule);}
+  .swap .tag{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    display:block;
+    margin-bottom:0.4rem;
+  }
+  .swap .no .tag{color:var(--navy-soft);}
+  .swap .yes .tag{color:var(--gold);}
+  .swap p{margin:0;font-size:0.96rem;}
+  .swap .no p{color:var(--navy-soft);}
+
+  ul.skip{list-style:none;padding:0;margin:1.5rem 0 0;}
+  ul.skip li{
+    padding:0.9rem 0 0.9rem 1.6rem;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+    font-size:0.97rem;
+  }
+  ul.skip li:last-child{border-bottom:none;}
+  ul.skip li::before{
+    content:"\00d7";
+    position:absolute;
+    left:0;
+    top:0.75rem;
+    color:var(--gold);
+    font-size:1.15rem;
+    line-height:1;
+  }
+  ul.skip strong{display:block;}
+
+  .check{list-style:none;padding:0;margin:1.5rem 0 0;}
+  .check li{
+    position:relative;
+    padding:0.8rem 0 0.8rem 2.3rem;
+    border-bottom:1px solid var(--rule);
+    font-size:0.97rem;
+  }
+  .check li:last-child{border-bottom:none;}
+  .check li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:1.15rem;
+    width:1.05rem;
+    height:1.05rem;
+    border:1.5px solid var(--navy-soft);
+    border-radius:3px;
+  }
+  .check strong{margin-right:0.15rem;}
+
+  footer{
+    padding:2.75rem 0 4.5rem;
+    font-size:0.86rem;
+    color:var(--navy-soft);
+    border-top:1px solid var(--rule);
+  }
+
+  @media print{
+    body{background:#fff;font-size:11pt;}
+    section{page-break-inside:avoid;border-bottom:1px solid #ccc;}
+    header{padding-top:0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>LinkedIn Best Practices</h1>
+    <p class="lede">A short guide to getting started on LinkedIn. How often to post, what to post, how to reshare, and what to avoid.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">01</span>
+    <h2>How often to post</h2>
+    <p>Two to three posts a week is a good target. Three to five is the upper end. If that seems like a lot, start with one post a week and keep it up for two months. Consistency matters more than volume.</p>
+    <div class="card">
+      <h3>Why more is not better</h3>
+      <p>LinkedIn avoids showing the same person's posts to the same reader twice in a short window. If you post twice in one day, the second post mostly competes with the first. Spacing posts out reaches more people.</p>
+    </div>
+    <p>Weekday mornings work best for work-related content. The exact time matters less than posting regularly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">02</span>
+    <h2>What to post</h2>
+    <p>Some formats reach more people than others. Ranked, strongest at the top:</p>
+    <ul class="rank">
+      <li>
+        <span class="tier">Best</span>
+        <span class="what">A document or carousel
+          <em>A short PDF that readers swipe through.</em>
+        </span>
+      </li>
+      <li>
+        <span class="tier">Strong</span>
+        <span class="what">Short video filmed on your phone
+          <em>Production quality is not required.</em>
+        </span>
+      </li>
+      <li>
+        <span class="tier">Strong</span>
+        <span class="what">Photos of real things
+          <em>A workshop, a room, a whiteboard, a team.</em>
+        </span>
+      </li>
+      <li>
+        <span class="tier">Good</span>
+        <span class="what">Plain text with a specific observation
+          <em>No image needed.</em>
+        </span>
+      </li>
+    </ul>
+    <div class="card">
+      <h3>If you are not sure what to post</h3>
+      <p>Write about one specific thing you noticed this week. A question a client asked. A pattern you keep seeing. Something you changed your mind about. You do not need a conclusion or a lesson.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">03</span>
+    <h2>How to reshare a post</h2>
+    <p>Resharing is the quickest way to post without writing from scratch. There are two ways to do it and they work differently.</p>
+
+    <ol class="steps">
+      <li>Find the post you want to share and scroll to the bottom of it.</li>
+      <li>Look for the reshare icon. It is two arrows forming a loop, next to <span class="ui">Comment</span> and labeled <span class="ui">Repost</span>.</li>
+      <li>Click it. A short menu appears with two choices.</li>
+      <li>Pick one of the two options below.</li>
+    </ol>
+
+    <div class="paths">
+      <div class="path">
+        <span class="label">Option A</span>
+        <h3><span class="ui">Repost</span></h3>
+        <p>Shares the post to your network exactly as it is, with credit to the original author. You write nothing.</p>
+        <p class="when">Use this when you want to pass something along and have nothing specific to add.</p>
+      </div>
+      <div class="path">
+        <span class="label">Option B</span>
+        <h3><span class="ui">Repost with your thoughts</span></h3>
+        <p>Opens a box for your own commentary. LinkedIn treats this as a new post from you and judges it on its own.</p>
+        <p class="when">Use this when you have something specific to say.</p>
+      </div>
+    </div>
+
+    <div class="card gold">
+      <h3>Commentary length matters</h3>
+      <p>If you choose <span class="ui">Repost with your thoughts</span> and write something short like "Great insights," the post reaches fewer people than if you had written nothing at all. Around a hundred words of real commentary performs well.</p>
+      <p>The rule is simple. If you have a hundred words to add, write them. If you do not, use the plain <span class="ui">Repost</span>.</p>
+    </div>
+
+    <h3 style="margin-top:2rem;">What good commentary looks like</h3>
+    <div class="swap">
+      <div class="no">
+        <span class="tag">Weak</span>
+        <p>"Great piece on psychological safety. Couldn't agree more."</p>
+      </div>
+      <div class="yes">
+        <span class="tag">Strong</span>
+        <p>"This matches something I see constantly. In one recent session, a team told me they had never once heard their manager admit to getting something wrong. Not once in four years. When we talked about why people stayed quiet in meetings, that was the whole answer. The behavior that builds safety is not a policy or a workshop. It is a leader saying out loud that they missed something, in front of the people who watched them miss it."</p>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem;">The second one contains something only you could have written: a specific situation, a detail from your own work. That is what gets it distributed.</p>
+
+    <div class="card">
+      <h3>You can also just comment</h3>
+      <p>Leaving a comment on the original post often does more for it than a silent reshare, and takes less time than writing full commentary.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">04</span>
+    <h2>Writing posts</h2>
+    <p>Only the first two lines show before a reader has to click <span class="ui">see more</span>. Open with the specific thing rather than the introduction to it.</p>
+    <div class="swap">
+      <div class="no">
+        <span class="tag">Weak opening</span>
+        <p>"I've been thinking a lot lately about leadership development and wanted to share some reflections on a topic that comes up often in my work."</p>
+      </div>
+      <div class="yes">
+        <span class="tag">Strong opening</span>
+        <p>"A managing partner told me last week that she has never given a piece of critical feedback without rehearsing it in the car first."</p>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem;">Keep paragraphs short with space between them, and one idea per paragraph. Write the way you would explain something to a colleague rather than the way you would write a report.</p>
+    <p>Length is flexible. Anywhere from a short paragraph to around 250 words works. Time spent reading counts in your favor, so do not cut something that is genuinely interesting.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">05</span>
+    <h2>After you post</h2>
+    <p>LinkedIn shows a new post to a small group first and watches the response. If that group engages within the first hour, LinkedIn shows the post to more people. If nothing happens, distribution stops.</p>
+    <ul class="check">
+      <li>Post when you have time free afterward, not right before a meeting.</li>
+      <li>Reply to every comment, ideally within an hour or two.</li>
+      <li>Write a real reply rather than a reaction. A reply counts as a comment.</li>
+      <li>Spend ten minutes commenting on other people's posts before publishing your own.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">06</span>
+    <h2>What to avoid</h2>
+    <ul class="skip">
+      <li><strong>Lots of hashtags.</strong> Zero to three is enough. LinkedIn reads the words in your post to work out the topic.</li>
+      <li><strong>Engagement bait.</strong> "Like if you agree" and "comment YES below" are filtered down.</li>
+      <li><strong>Posting the same text everywhere.</strong> A post written for LinkedIn reads differently from one written for another platform.</li>
+      <li><strong>Asking colleagues to like your post.</strong> Coordinated engagement is detected and discounted.</li>
+      <li><strong>Selling in most of your posts.</strong> Roughly four useful posts for every promotional one.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="sec-num">07</span>
+    <h2>Your first month</h2>
+    <p>A simple way to start.</p>
+    <ul class="check">
+      <li><strong>Week one.</strong> Reshare two posts you found useful. Use the plain repost and write nothing.</li>
+      <li><strong>Week two.</strong> Leave a comment on three posts.</li>
+      <li><strong>Week three.</strong> Write one short post about something specific from your work.</li>
+      <li><strong>Week four.</strong> Post again and reply to anyone who responds.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Reflects LinkedIn platform behavior as of July 2026. The platform changes often, so treat the specifics as current rather than permanent.</p>
+  </div>
+</footer>
+
+</body>
+</html>
