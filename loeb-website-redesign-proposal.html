@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Redesign Proposal — Loeb Leadership</title>
+<meta name="description" content="Three scoped options for the Loeb Leadership website redesign and brand refresh, prepared by Clarity Communications, LLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Montserrat:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#F6F2E9;
+    --card:#FDFBF6;
+    --navy:#113662;
+    --navy-soft:#4A5D75;
+    --rule:#DED6C6;
+    --gold:#EFA119;
+    --gold-wash:#FBF0D9;
+    --measure:52rem;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
+  body{
+    margin:0;background:var(--ground);color:var(--navy);
+    font-family:'Montserrat',system-ui,sans-serif;
+    font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem;}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0;letter-spacing:-0.01em;}
+  h1{font-size:clamp(2rem,5.5vw,3rem);font-weight:700;}
+  h2{font-size:clamp(1.45rem,3.5vw,1.85rem);}
+  h3{font-size:1.15rem;}
+  h4{font-size:1rem;font-family:'Montserrat',sans-serif;font-weight:600;}
+  p{margin:0 0 1.1rem;}
+  p:last-child{margin-bottom:0;}
+  a{color:var(--navy);text-decoration-color:var(--gold);text-underline-offset:3px;}
+  strong{font-weight:600;}
+
+  .kicker{
+    font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.7rem;
+  }
+  header{padding:4.5rem 0 2.5rem;border-bottom:1px solid var(--rule);}
+  header .lede{font-size:1.1rem;color:var(--navy-soft);margin-top:1.2rem;max-width:38rem;}
+  header .meta{
+    display:flex;flex-wrap:wrap;gap:1.75rem;margin-top:1.75rem;
+    font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.05em;color:var(--navy-soft);
+  }
+  header .meta span b{display:block;color:var(--navy);font-weight:600;letter-spacing:0;}
+
+  section{padding:3rem 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:1.35rem 1.5rem;margin:1.4rem 0;}
+  .card.gold{background:var(--gold-wash);border-color:#E9D9AE;}
+  .card h3{margin-bottom:0.55rem;}
+
+  table{width:100%;border-collapse:collapse;margin:1.3rem 0;background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:hidden;font-size:0.9rem;}
+  th{
+    font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.09em;text-transform:uppercase;
+    color:var(--navy-soft);text-align:left;padding:0.7rem 0.85rem;border-bottom:2px solid var(--rule);background:var(--ground);
+  }
+  td{padding:0.7rem 0.85rem;border-bottom:1px solid var(--rule);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td.num,th.num{font-family:'JetBrains Mono',monospace;font-size:0.82rem;white-space:nowrap;}
+  .table-scroll{overflow-x:auto;}
+
+  .opt-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:0.75rem;
+    padding:1.4rem 1.5rem;background:var(--navy);color:var(--ground);border-radius:8px 8px 0 0;
+  }
+  .opt-head h3{color:var(--ground);font-size:1.35rem;}
+  .opt-head .tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.3rem;}
+  .opt-price{text-align:right;}
+  .opt-price .amount{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--gold);}
+  .opt-price .sub{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#C9D2DE;display:block;margin-top:0.15rem;}
+  .opt-body{background:var(--card);border:1px solid var(--rule);border-top:none;border-radius:0 0 8px 8px;padding:1.5rem;margin-bottom:2.5rem;}
+  .opt-body h4{margin:1.4rem 0 0.6rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.11em;text-transform:uppercase;color:var(--navy-soft);}
+  .opt-body h4:first-child{margin-top:0;}
+
+  ul.inc{list-style:none;padding:0;margin:0.4rem 0 0;}
+  ul.inc li{padding:0.5rem 0 0.5rem 1.5rem;border-bottom:1px solid var(--rule);position:relative;font-size:0.93rem;}
+  ul.inc li:last-child{border-bottom:none;}
+  ul.inc li::before{content:"\2713";position:absolute;left:0;top:0.45rem;color:var(--gold);font-weight:700;}
+
+  ul.exc{list-style:none;padding:0;margin:0.4rem 0 0;}
+  ul.exc li{padding:0.5rem 0 0.5rem 1.5rem;border-bottom:1px solid var(--rule);position:relative;font-size:0.93rem;color:var(--navy-soft);}
+  ul.exc li:last-child{border-bottom:none;}
+  ul.exc li::before{content:"\00d7";position:absolute;left:0;top:0.4rem;color:var(--gold);font-size:1.1rem;line-height:1;}
+
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0.85rem;margin:0.4rem 0 0;}
+  @media (max-width:560px){.stat-row{grid-template-columns:1fr;}}
+  .stat{background:var(--ground);border:1px solid var(--rule);border-radius:6px;padding:0.8rem 0.95rem;}
+  .stat .lbl{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-soft);display:block;margin-bottom:0.25rem;}
+  .stat .val{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;}
+
+  footer{padding:2.5rem 0 4rem;font-size:0.84rem;color:var(--navy-soft);border-top:1px solid var(--rule);}
+  .fineprint{font-size:0.82rem;color:var(--navy-soft);}
+
+  @media print{
+    body{background:#fff;font-size:10.5pt;}
+    section{page-break-inside:avoid;border-bottom:1px solid #ccc;padding:1.5rem 0;}
+    header{padding-top:0;}
+    .opt-head{background:#113662!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    table{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="kicker">Proposal &middot; Confidential</span>
+    <h1>Website Redesign &amp; Brand Refresh</h1>
+    <p class="lede">This proposal outlines two options for the Loeb Leadership website redesign project. The goal is to position Loeb as a leading-edge, modern competitor in the leadership development, training, and coaching space. Both options assume an April 2027 launch, with pre-launch phases beginning in 2026.</p>
+    <div class="meta">
+      <span><b>Prepared for</b>Loeb Leadership</span>
+      <span><b>Prepared by</b>Lexi Gibson &middot; Clarity Communications, LLC</span>
+      <span><b>Date</b>August 2026</span>
+      <span><b>Valid through</b>October 31, 2026</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">01 &middot; Starting Point</span>
+    <h2>Current State</h2>
+    <p>The site has <strong>401 pages</strong>, per the August 2026 sitemap: roughly 145 core pages and 255 blog posts. The blog performs well. 78% of posts rank on page one of Google, and the blog is the main source of AI-engine citations, which convert at about twice the rate of organic search. In both options, the full blog migrates as-is.</p>
+    <p>The 145 core pages need far fewer design decisions than the count suggests. One bio template covers multiple team member pages. One design covers the industry pages. That is why a fixed price is possible on a site this size.</p>
+    <div class="card gold">
+      <h3>How This Project Works With the Existing Retainer</h3>
+      <p>Copy and design for the homepage, Services pages, and Location pages are delivered under the existing monthly retainer and are <strong>not billed within this project</strong>. This project covers everything else: site structure, page designs, the site build, address protection, search-ranking protection, and testing, plus copy for pages the retainer does not cover. There is no overlap and no double billing.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">02 &middot; The Options</span>
+    <h2>Two Options</h2>
+    <p>Both options are complete projects on their own. They differ in one decision: keep the current Loeb brand, or update it. Option 1 rebuilds the website on the existing brand. Option 2 does the same rebuild on a fully refreshed brand identity, launched together.</p>
+
+    <!-- OPTION 1 -->
+    <div class="opt-head">
+      <div><span class="tag">Option 1 &middot; Website</span><h3>Reposition</h3></div>
+      <div class="opt-price"><span class="amount">$25,000</span><span class="sub">16&ndash;20 weeks</span></div>
+    </div>
+    <div class="opt-body">
+      <h4>Summary</h4>
+      <p>A full redesign of the website. The site gets a new structure that leads with programs and outcomes, keeps law firms as the flagship audience, and makes room for other industries to grow. Every page design is rebuilt with lead generation built in, and current Google rankings and AI citations are protected throughout. The site is built on the current Loeb brand.</p>
+
+      <h4>Included</h4>
+      <ul class="inc">
+        <li>A new site structure: how pages are organized, what appears in the menus, and what lives where (see Definitions)</li>
+        <li>A new sitewide design: fonts, colors, spacing, and photography choices applied consistently across the site</li>
+        <li>Design and build of every page type outside the retainer’s scope: the team bio pages (one design applied to every coach and staff bio), the 13 industry pages, the program pages (Impact Series, Managing for Impact, Leading for Impact, Making an Impact, Coach’s Counsel, Real Talk), the assessment pages, the retreat pages, About, Our Team, Clients, Contact, FAQs, News &amp; Media, the Beyond the Courtroom book page, the blog post design, and the blog archive</li>
+        <li>Entry of all existing content into the new page designs</li>
+        <li>Copy for the priority pages the retainer does not cover: About, Our Team, Clients, FAQs, the Impact Series program pages, and the Beyond the Courtroom book page</li>
+        <li>Lead generation built into every page design: clear calls to action, form placement, and space for lead magnets</li>
+        <li>Address protection: when a page address changes, an automatic forward (a redirect) is set up from the old address to the new one, so saved links and Google results keep working. Blog addresses do not change at all.</li>
+        <li>The behind-the-scenes code that helps Google understand each page is carried over and tested after launch</li>
+        <li>A keep-or-remove recommendation for the location and industry pages. Before recommending that any page be removed, we check whether AI tools like ChatGPT are citing it, so nothing that brings in leads gets deleted.</li>
+        <li>Curated stock photography direction</li>
+        <li>Every page design tested on current versions of major browsers and across phone, tablet, and desktop screens, and designed with accessibility best practices</li>
+        <li>Full launch testing: search tools, contact forms, and store checkout all confirmed working</li>
+        <li>2-week post-launch fix window</li>
+      </ul>
+
+      <h4>Not Included</h4>
+      <ul class="exc">
+        <li>New logo, colors, fonts, or brand guidelines (that is Option 2)</li>
+        <li>Copy beyond the named project pages</li>
+        <li>Custom one-off layouts for individual location or industry pages</li>
+        <li>Presentation templates or sales collateral</li>
+        <li>Photography shoots or custom illustration</li>
+        <li>New site features (member areas, login-protected content, new store features)</li>
+      </ul>
+
+      <h4>Revisions Included</h4>
+      <div class="table-scroll"><table>
+        <tr><th>Deliverable</th><th class="num">Rounds</th></tr>
+        <tr><td>Site structure (page organization + menus)</td><td class="num">1</td></tr>
+        <tr><td>Design direction (shown on 2 key page designs)</td><td class="num">2</td></tr>
+        <tr><td>Each remaining page design</td><td class="num">1</td></tr>
+        <tr><td>Copy, per page</td><td class="num">1</td></tr>
+      </table></div>
+      <p class="fineprint" style="margin-top:0.6rem;">A revision round means one consolidated set of feedback: input from all Loeb reviewers, gathered into a single response by the designated approver, delivered in the format requested and within the timeline in Section 05.</p>
+    </div>
+
+    <!-- OPTION 2 -->
+    <div class="opt-head">
+      <div><span class="tag">Option 2 &middot; Brand Identity + Website</span><h3>Rebrand + Reposition</h3></div>
+      <div class="opt-price"><span class="amount">$40,000</span><span class="sub">24&ndash;28 weeks</span></div>
+    </div>
+    <div class="opt-body">
+      <h4>Summary</h4>
+      <p>Everything in Option 1, plus a full update of the Loeb visual identity: logo, colors, fonts, and imagery style. The identity is designed first, and the new website is designed on it from day one. The new brand and the new site launch together, in a single rollout, so everything Loeb puts in front of a client looks like it comes from the same modern company.</p>
+
+      <div class="card">
+        <h3>Brand Architecture: Consolidating the Sub-Brand Logos</h3>
+        <p>Loeb currently has separate logos for its programs and service lines: the Impact Series marks (Making an Impact, Managing for Impact, Leading for Impact), Real Talk, Leadership Coaching, Organizational Consulting, Learning &amp; Development, and others. Each one competes with the Loeb name for attention, and none is recognized on its own. <strong>The recommendation is to retire these logos.</strong> They would be replaced with one consistent text treatment under the main Loeb brand. Every program then builds recognition for Loeb instead of splitting it, and future program launches get faster because the naming system already exists.</p>
+      </div>
+
+      <h4>Included &mdash; Everything in Option 1, Plus:</h4>
+      <ul class="inc">
+        <li>Brand workshop with Loeb leadership: what the brand should say, how it should feel, and who it competes with</li>
+        <li>Brand architecture audit and sub-brand consolidation plan (per above)</li>
+        <li>Logo redesign: 3 concepts, refinement of the selected direction, final files in all formats</li>
+        <li>Color system and typography system, selected for digital accessibility</li>
+        <li>Program text treatments replacing the retired sub-brand logos</li>
+        <li>Photography and imagery direction</li>
+        <li>Brand guidelines document (12&ndash;18 pages: usage rules, do/don't, file library)</li>
+        <li>A one-page messaging foundation: tagline options, a boilerplate company description, and a short elevator description</li>
+        <li>PowerPoint template: master slides plus 10&ndash;15 layouts</li>
+        <li>Core sales collateral on the new identity: services one-pager, email banner set, LinkedIn page assets</li>
+        <li>Rollout support: social profiles, email templates, and the book page updated at launch, so the old and new logos are never in public use at the same time</li>
+      </ul>
+
+      <h4>Not Included</h4>
+      <ul class="exc">
+        <li>Everything listed as not included under Option 1, except identity work</li>
+        <li>Company renaming or naming strategy</li>
+        <li>Trademark filing or legal clearance (recommended; handled by Loeb's counsel)</li>
+        <li>Printing costs for collateral</li>
+        <li>Signage, merchandise, or environmental applications</li>
+        <li>Collateral beyond the three named pieces (additional pieces, such as slipsheets and workbooks, priced per the design rate card)</li>
+        <li>Updates to third-party platforms Clarity does not administer</li>
+        <li>Squarespace subscription fees for the temporary second site during the build (paid by Loeb directly to Squarespace; see Build Approach)</li>
+      </ul>
+
+      <h4>Revisions Included</h4>
+      <div class="table-scroll"><table>
+        <tr><th>Deliverable</th><th class="num">Rounds</th></tr>
+        <tr><td>Logo (3 concepts &rarr; 1 selected direction)</td><td class="num">2 on selected direction</td></tr>
+        <tr><td>Color + typography system</td><td class="num">1</td></tr>
+        <tr><td>Program text treatments</td><td class="num">1</td></tr>
+        <tr><td>Brand guidelines</td><td class="num">1</td></tr>
+        <tr><td>Messaging foundation</td><td class="num">1</td></tr>
+        <tr><td>PowerPoint template</td><td class="num">1</td></tr>
+        <tr><td>Each collateral piece</td><td class="num">1</td></tr>
+        <tr><td>Site structure (page organization + menus)</td><td class="num">1</td></tr>
+        <tr><td>Design direction (shown on 2 key page designs)</td><td class="num">2</td></tr>
+        <tr><td>Each remaining page design</td><td class="num">1</td></tr>
+        <tr><td>Copy, per page</td><td class="num">1</td></tr>
+      </table></div>
+      <p class="fineprint" style="margin-top:0.6rem;">A revision round means one consolidated set of feedback: input from all Loeb reviewers, gathered into a single response by the designated approver, delivered in the format requested and within the timeline in Section 05.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">03 &middot; Market Context</span>
+    <h2>Pricing Comparison</h2>
+    <p>Published 2026 market rates for the same type of work, grouped by option. Sources are listed at the end of this document.</p>
+
+    <div class="table-scroll"><table>
+      <tr><th>Comparable Work</th><th>Market Range</th></tr>
+      <tr><td colspan="2" style="background:var(--gold-wash);font-weight:600;">Option 1 &middot; Reposition &mdash; $25,000</td></tr>
+      <tr><td>Website redesign, agency (small business)</td><td class="num">$5,000&ndash;$75,000</td></tr>
+      <tr><td>Custom mid-size website redesign</td><td class="num">$10,000&ndash;$30,000</td></tr>
+      <tr><td colspan="2" style="background:var(--gold-wash);font-weight:600;">Option 2 &middot; Rebrand + Reposition &mdash; $40,000</td></tr>
+      <tr><td>Brand identity only (logo, colors, fonts, guidelines &mdash; no website), design studio</td><td class="num">$5,000&ndash;$20,000</td></tr>
+      <tr><td>Full rebrand including website, boutique agency</td><td class="num">$25,000&ndash;$75,000</td></tr>
+      <tr><td>Full rebrand including website, mid-size agency</td><td class="num">$75,000&ndash;$150,000</td></tr>
+    </table></div>
+    <p class="fineprint">Each fee falls at or below the market range for equivalent work. Because Clarity already manages the site, its analytics, and its SEO, no time is spent getting up to speed, and that efficiency is reflected in the pricing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">04 &middot; Working Agreement</span>
+    <h2>Roles and Responsibilities</h2>
+    <div class="table-scroll"><table>
+      <tr><th>Role</th><th>Who</th><th>Responsibilities</th></tr>
+      <tr>
+        <td><strong>Project lead</strong></td>
+        <td>Lexi Gibson, Clarity Communications</td>
+        <td>Strategy, site structure, design, Squarespace build, project-scope copywriting, search-ranking protection, launch testing, project management, weekly status reporting</td>
+      </tr>
+      <tr>
+        <td><strong>Designated approver</strong></td>
+        <td>Taris Mullins</td>
+        <td>Single point of approval for deliverables at every gate. Consolidates all internal feedback into one set of comments per review round.</td>
+      </tr>
+      <tr>
+        <td><strong>Contract authority</strong></td>
+        <td>Natalie Loeb, Gordon Loeb</td>
+        <td>Approves the contract, scope changes, fees, and any modification to this agreement, per the consulting agreement.</td>
+      </tr>
+      <tr>
+        <td><strong>Loeb team</strong></td>
+        <td>As assigned</td>
+        <td>Provides brand assets, program information, photography approvals, and platform access within 5 business days of request. Additional stakeholder input is consolidated through the designated approver.</td>
+      </tr>
+    </table></div>
+
+    <h3 style="margin-top:2rem;">Service Levels &mdash; Both Directions</h3>
+    <div class="table-scroll"><table>
+      <tr><th>Commitment</th><th>Standard</th></tr>
+      <tr><td>Clarity response to messages during active phases</td><td>Within 2 business days</td></tr>
+      <tr><td>Clarity status update</td><td>Weekly, every active week</td></tr>
+      <tr><td>Loeb feedback at each review gate</td><td>One consolidated set of comments within 5 business days</td></tr>
+      <tr><td>Feedback received late</td><td>Timeline shifts day-for-day</td></tr>
+      <tr><td>Approval gates</td><td>Sign-off signifies final approval and the project moves to the next phase. Revisiting a previous phase after sign-off (for example, changing the approved site structure during the build) is billed at $150/hr per the consulting agreement.</td></tr>
+      <tr><td>Revisions beyond the included rounds</td><td>$150/hr, invoiced on completion, per the consulting agreement</td></tr>
+      <tr><td>Rush requests (under 5 business days)</td><td>25% premium, per the consulting agreement</td></tr>
+      <tr><td>Post-launch fix window</td><td>2 weeks of bug fixes at no charge; ongoing changes revert to the retainer</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">05 &middot; Timeline</span>
+    <h2>Phases and Approval Gates</h2>
+    <div class="table-scroll"><table>
+      <tr><th>Phase</th><th class="num">Opt 1</th><th class="num">Opt 2</th><th>Gate at end of phase</th></tr>
+      <tr><td>Brand workshop + identity design</td><td class="num">&mdash;</td><td class="num">Wk 1&ndash;8</td><td>Identity sign-off</td></tr>
+      <tr><td>Guidelines, PowerPoint template, collateral</td><td class="num">&mdash;</td><td class="num">Wk 9&ndash;10</td><td>Asset acceptance</td></tr>
+      <tr><td>Site structure + design direction</td><td class="num">Wk 1&ndash;3</td><td class="num">Wk 11&ndash;12</td><td>Site structure sign-off</td></tr>
+      <tr><td>Page design</td><td class="num">Wk 4&ndash;9</td><td class="num">Wk 13&ndash;18</td><td>Design sign-off</td></tr>
+      <tr><td>Build + project copy</td><td class="num">Wk 10&ndash;16</td><td class="num">Wk 19&ndash;24</td><td>Build review</td></tr>
+      <tr><td>Search-ranking protection + address checks</td><td class="num">Wk 17&ndash;18</td><td class="num">Wk 25&ndash;26</td><td>Migration checklist complete</td></tr>
+      <tr><td>Launch testing + launch (+ brand rollout, Opt 2)</td><td class="num">Wk 19&ndash;20</td><td class="num">Wk 27&ndash;28</td><td>Launch acceptance</td></tr>
+    </table></div>
+    <p class="fineprint">Kickoff for a targeted April 2027 launch: Option 1 by late November 2026, Option 2 by October 2026. Timelines assume feedback within the 5-business-day standard.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">06 &middot; Terms</span>
+    <h2>Payment, Assumptions, and Scope Changes</h2>
+
+    <h3>Payment Structure</h3>
+    <div class="table-scroll"><table>
+      <tr><th>Option</th><th>Structure</th></tr>
+      <tr><td>Option 1</td><td>4 equal installments: kickoff, site structure sign-off, design sign-off, launch</td></tr>
+      <tr><td>Option 2</td><td>4 equal installments: kickoff, identity sign-off, design sign-off, launch</td></tr>
+    </table></div>
+    <p class="fineprint">Both options are fixed fees for the scope defined above. Work outside the defined scope is priced separately (see Scope Changes below). Invoices due within 30 days per the consulting agreement. Post-launch support is already covered under the existing monthly retainer; there is no separate maintenance or support fee after launch for any option.</p>
+
+    <h3 style="margin-top:1.8rem;">Build Approach</h3>
+    <ul class="inc">
+      <li>New page designs are built privately on the live site and are not visible to visitors. The current site stays live and unchanged throughout the project.</li>
+      <li>Sitewide style changes (fonts and colors) are applied during a scheduled launch window to keep any visible transition to a few hours.</li>
+      <li>For Option 2, the full rebrand is built on a private duplicate of the site, and the web address is moved to the new site at launch. A test duplicate is run at kickoff to confirm exactly what carries over, and that inventory becomes the launch checklist.</li>
+      <li><strong>Option 2 requires a second Squarespace subscription</strong> while the private build site and the current site run side by side (roughly 3&ndash;5 months). Loeb pays Squarespace directly for the second subscription at Squarespace's current rates, and the original subscription is canceled after launch.</li>
+    </ul>
+
+    <h3 style="margin-top:1.8rem;">Scope Changes</h3>
+    <p>Anything not on the included lists above is a scope change. Scope changes are agreed in writing, with an estimate, before work begins, and are billed at $150/hr, consistent with the consulting agreement. Multi-page design assets are priced per the existing design rate card.</p>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="wrap">
+    <span class="kicker">07 &middot; Reference</span>
+    <h2>Definitions</h2>
+    <p>Plain-English definitions of the terms used in this proposal.</p>
+    <div class="table-scroll"><table>
+      <tr><th>Term</th><th>Meaning</th></tr>
+      <tr><td><strong>Site structure</strong> (information architecture)</td><td>How the site's pages are organized and grouped: what appears in the menus, what lives under what, and how a visitor gets from one area to another.</td></tr>
+      <tr><td><strong>Page design</strong> (template)</td><td>A reusable page layout. One design can power many pages. All 40+ team bios, for example, use a single design.</td></tr>
+      <tr><td><strong>Design system</strong></td><td>The set of rules for how the site looks: which fonts, colors, spacing, and image styles are used, and where. It keeps every page consistent.</td></tr>
+      <tr><td><strong>Brand identity</strong></td><td>The visual elements that represent the company everywhere, on and off the website: the logo, colors, fonts, and image style.</td></tr>
+      <tr><td><strong>Brand identity work</strong></td><td>Creating new versions of those elements: a new logo, new colors, new fonts. A refresh, by contrast, keeps the current elements and applies them better.</td></tr>
+      <tr><td><strong>Page address</strong> (URL)</td><td>The web address of a page, e.g. loebleadership.com/coaching.</td></tr>
+      <tr><td><strong>Redirect</strong></td><td>An automatic forward from an old page address to a new one. It keeps saved links, email links, and Google results working after an address changes.</td></tr>
+      <tr><td><strong>Search-ranking protection</strong> (SEO migration)</td><td>The work of keeping Google rankings through a redesign: keeping or forwarding page addresses, and carrying over the titles, descriptions, and behind-the-scenes code Google reads.</td></tr>
+      <tr><td><strong>AI citations</strong></td><td>When AI tools like ChatGPT reference Loeb's pages in their answers. These referrals convert to leads at about twice the rate of Google search.</td></tr>
+      <tr><td><strong>Call to action</strong> (CTA)</td><td>A button or prompt inviting the visitor to take the next step, such as Contact Us or Download the Guide.</td></tr>
+      <tr><td><strong>Lead magnet</strong></td><td>A free resource, such as a guide or checklist, offered in exchange for a visitor's contact information.</td></tr>
+      <tr><td><strong>Approval gate</strong></td><td>A checkpoint at the end of each phase where Loeb reviews and signs off before the next phase begins.</td></tr>
+      <tr><td><strong>Launch testing</strong> (QA)</td><td>Checking every page, link, form, and device size before and after the new site goes live.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Clarity Communications, LLC &middot; lexi@clarity-communications.com &middot; clarity-communications.com<br>
+    Market pricing sources: WebFX, Sayenko Design, Clique Studios, Space-O Technologies, Widely Interactive, Splash Creative, Keller Creative, 8GNC, Cult Method, SF.Digital, Design by Ency. Figures reflect published 2026 pricing guides.</p>
+  </div>
+</footer>
+
+</body>
+</html>
